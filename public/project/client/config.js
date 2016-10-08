@@ -9,87 +9,87 @@
     function Configure($routeProvider) {
         $routeProvider
             .when("/home",{
-                templateUrl: "views/home.view.html",
+                templateUrl: "project/client/views/home.view.html",
                 controller: "HomeController as controller"
             })
             .when("/about", {
-                templateUrl: "views/about.view.html",
+                templateUrl: "project/client/views/about.view.html",
                 controller: "AboutController as controller"
             })
             .when("/contact", {
-                templateUrl: "views/contact.view.html",
+                templateUrl: "project/client/views/contact.view.html",
                 controller: "ContactController as controller"
             })
             .when("/directions", {
-                templateUrl: "views/directions.view.html",
+                templateUrl: "project/client/views/directions.view.html",
                 controller: "DirectionsController as controller"
             })
             .when("/events", {
-                templateUrl: "views/events.view.html",
+                templateUrl: "project/client/views/events.view.html",
                 controller: "EventsController as controller"
             })
             .when("/faq", {
-                templateUrl: "views/faq.view.html",
+                templateUrl: "project/client/views/faq.view.html",
                 controller: "FAQController as controller"
             })
             .when("/library", {
-                templateUrl: "views/library.view.html",
+                templateUrl: "project/client/views/library.view.html",
                 controller: "LibraryController as controller"
             })
             .when("/login", {
-                templateUrl: "views/login.view.html",
+                templateUrl: "project/client/views/login.view.html",
                 controller: "LoginController as controller"
             })
             .when("/news", {
-                templateUrl: "views/news.view.html",
+                templateUrl: "project/client/views/news.view.html",
                 controller: "NewsController as controller"
             })
             .when("/pricing", {
-                templateUrl: "views/pricing.view.html",
+                templateUrl: "project/client/views/pricing.view.html",
                 controller: "PricingController as controller"
             })
             .when("/profile", {
-                templateUrl: "views/profile.view.html",
+                templateUrl: "project/client/views/profile.view.html",
                 controller: "ProfileController as controller",
                 resolve: {
                     loggedin : checkLoggedIn
                 }
             })
             .when("/update", {
-                templateUrl: "views/update.view.html",
+                templateUrl: "project/client/views/update.view.html",
                 controller: "UpdateController as controller",
                 resolve: {
                     loggedin : checkLoggedIn
                 }
             })
             .when("/register", {
-                templateUrl: "views/register.view.html",
+                templateUrl: "project/client/views/register.view.html",
                 controller: "RegisterController as controller"
             })
             .when("/search", {
-                templateUrl: "views/search.view.html",
+                templateUrl: "project/client/views/search.view.html",
                 controller: "SearchController as controller"
             })
             .when("/admin", {
-                templateUrl: "views/admin.view.html",
+                templateUrl: "project/client/views/admin.view.html",
                 controller: "AdminController as controller",
                 resolve: {
                     isAdmin : checkIsAdmin
                 }
             })
             .when("/owner", {
-                templateUrl: "views/owner.view.html",
+                templateUrl: "project/client/views/owner.view.html",
                 controller: "OwnerController as controller",
                 resolve: {
                     isOwner : checkIsOwner
                 }
             })
             .when("/search", {
-                templateUrl: "views/search.view.html",
+                templateUrl: "project/client/views/search.view.html",
                 controller: "SearchController as controller"
             })
             .when("/detail", {
-                templateUrl: "views/detail.view.html",
+                templateUrl: "project/client/views/detail.view.html",
                 controller: "DetailController as controller"
             })
             .otherwise({

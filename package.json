@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Knight Moves Cafe's website",
   "keywords": [
-    "board games", "Knight Moves", "Coolidge Corner", "Teele Square", "Settlers of Catan"
+    "board games",
+    "Knight Moves",
+    "Coolidge Corner",
+    "Teele Square",
+    "Settlers of Catan"
   ],
   "author": {
     "name": "Sarah Parker",
-    "email": "sparker416@gmail.com",
+    "email": "sparker416@gmail.com"
   },
   "homepage": "http://www.knightmovescafe.com/",
   "repository": {
@@ -20,12 +24,12 @@
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.15.1",
+    "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^3.21.2",
-    "express-session": "^1.14.0",
-    "mongoose": "^4.5.3",
-    "multer": "^1.1.0",
+    "express-session": "^1.14.1",
+    "mongoose": "^4.6.3",
+    "multer": "^1.2.0",
     "ng-dialog": "^0.6.1",
     "nodemailer": "^2.6.4",
     "passport": "^0.3.2",
