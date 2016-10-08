@@ -1,4 +1,15 @@
 {
+  "name": "KnightMoves",
+  "version": "1.0.0",
+  "description": "Knight Moves Cafe's website",
+  "keywords": [
+    "board games", "Knight Moves", "Coolidge Corner", "Teele Square", "Settlers of Catan"
+  ],
+  "author": {
+    "name": "Sarah Parker",
+    "email": "sparker416@gmail.com",
+  },
+  "homepage": "http://www.knightmovescafe.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/sparker416/knightmovescafe"
