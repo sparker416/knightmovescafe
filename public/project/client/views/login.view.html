@@ -1,0 +1,39 @@
+<div class="back-white-black-border pad-top-bottom-10-px margin-1">
+
+    <h2 class="align-center">Login</h2>
+
+    <div ng-show="controller.message" class="alert alert-danger" role="alert">{{controller.message}}</div>
+
+<!--    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username</label>
+            <div class="col-sm-4">
+                <input ng-model="username" type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-offset-3 col-sm-2 control-label">Password</label>
+            <div class="col-sm-4">
+                <input ng-model="password" type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-5 col-sm-4">
+                <button ng-click="login(username, password)" type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>
+    -->
+
+    <a href="/auth/google/login"
+       class="btn btn-danger btn-block">
+        <span class="fa fa-google-plus"></span>
+        Google
+    </a>
+
+    <a href="/auth/facebook/login"
+       class="btn btn-primary btn-block">
+        <span class="fa fa-facebook"></span>
+        Facebook
+    </a>
+</div>

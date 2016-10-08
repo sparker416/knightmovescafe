@@ -1,0 +1,62 @@
+<div>
+    <nav ng-controller="HeaderController as controller">
+        <!--
+        <div class="mycontainer navbar login-links-fixed bold navbar-text">
+                    <span ng-hide="controller.currentUser" ng-class="{'active': controller.$location.url()=='/register'}">
+                        <a href="#/register" class="white-text">Register</a>
+                    </span>
+            <span ng-hide="controller.currentUser" class="white-text bold"> | </span>
+                    <span ng-hide="controller.currentUser" ng-class="{'active': controller.$location.url()=='/login'}">
+                        <a href="#/login" class="white-text">   Login  </a>
+                    </span>
+                    <span ng-class="{'active': controller.$location.url()=='/profile'}" ng-show="controller.currentUser">
+                        <a href="#/profile" class="white-text"> Profile</a>
+                    </span>
+            <span ng-show="controller.currentUser" class="white-text bold"> | </span>
+                    <span ng-show="controller.currentUser.roles.indexOf('admin') > -1" ng-class="{'active': controller.$location.url()=='/admin'}">
+                        <a href="#/admin" class="white-text">   Admin  </a>
+                    </span>
+            <span ng-show="controller.currentUser.roles.indexOf('admin') > -1" class="white-text bold"> | </span>
+                               <span ng-show="controller.currentUser.roles.indexOf('owner') > -1" ng-class="{'active': controller.$location.url()=='/owner'}">
+                        <a href="#/owner" class="white-text">   UberAdmin  </a>
+                    </span>
+            <span ng-show="controller.currentUser.roles.indexOf('owner') > -1" class="white-text bold"> | </span>
+                    <span ng-show="controller.currentUser">
+                        <a ng-click="controller.logout()" class="white-text">  Logout </a>
+                    </span>
+        </div> -->
+    </nav>
+    <nav class="navbar" role="navigation" >
+        <div class="header-pic">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../../../index.html">
+                    <img src="images/KM_logo.png" alt="Knight Moves logo" />
+                </a>
+            </div>
+            <div class="navbar-right nav-links-fixed navbar-right bold">
+                <ul class="nav nav-pills">
+                    <li ng-class="{'active': controller.$location.url().indexOf('home') >= 0}"><a href="#/home">Home</a></li>
+                    <li ng-class="{'active': controller.$location.url().indexOf('about') >= 0}"><a href="#/about">About</a></li>
+                    <!-- <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Game Library<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#/library">View</a></li>
+                            <li><a href="#/search">Search</a></li>
+                        </ul>
+                    </li>
+                    -->
+                    <li role="presentation"><a href="#/pricing">Pricing</a></li>
+                    <li role="presentation"><a href="#/events">Events</a></li>
+                    <li role="presentation"><a href="#/contact">Contact</a></li>
+                    <li role="presentation"><a href="#/directions">Directions</a></li>
+                    <li role="presentation"><a href="#/faq">FAQ</a></li>
+                   <!-- <li role="presentation"><a href="#/news">News and Reviews</a></li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

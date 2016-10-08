@@ -1,0 +1,119 @@
+<h1 class="align-center white-text bold">Admin</h1>
+
+<div class="pad-10-px">
+    <table class="table table-bordered width-98">
+        <tr>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Description</th>
+            <th>Number of Players</th>
+            <th>Playing Time (hours)</th>
+            <th>Age Range</th>
+            <th>Type(s)</th>
+            <th>Location</th>
+            <th>&nbsp;</th>
+        </tr>
+        <form id="newGame">
+            <tr>
+                <td><input title="newGameName" type="text" ng-model="game.Name" class="text-input"></td>
+                <td><input title="newGamePicURL" type="text" ng-model="game.Picture" class="text-input"></td>
+                <td><textarea title="newGameDesc" ng-model="game.Description" cols="35" rows="10"></textarea></td>
+                <td class="num-range">
+                    <input title="newGameMinNumPlayer" type="number" ng-model="game.Min_Num_of_Players" class="num-input">-<input title="newGameMaxNumPlayer" type="number" ng-model="game.Max_Num_of_Players" class="num-input">
+                </td>
+                <td class="num-range">
+                    <input title="newGameMinPlayTime" type="number" ng-model="game.Min_Playing_Time" class="num-input">-<input title="newGameMaxPlayTime" type="number" ng-model="game.Max_Playing_Time" class="num-input">
+                </td>
+                <td class="num-range">
+                    <input title="newGameMinAge" type="number" ng-model="game.Min_Age" class="num-input">-<input title="newGameMaxAge" type="number" ng-model="game.Max_Age" class="num-input">
+                </td>
+                <td>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="game.Co_op" ng-true-value="true" ng-false-value="false"> Co-op
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Strategy" ng-true-value="true" ng-false-value="false"> Strategy
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Party"  ng-true-value="true" ng-false-value="false"> Party
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Classic" ng-true-value="true" ng-false-value="false"> Classic
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Worker_placement" ng-true-value="true" ng-false-value="false"> Worker Placement
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Resource_management" ng-true-value="true" ng-false-value="false"> Resource Management
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Deck_building" ng-true-value="true" ng-false-value="false"> Deck Building
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="game.Coolidge_Corner" ng-true-value="true" ng-false-value="false"> Coolidge Corner
+                        </label>
+                        <label>
+                            <input type="checkbox" ng-model="game.Teele_Square" ng-true-value="true" ng-false-value="false"> Teele Square
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <button ng-hide="controller.currentGame" ng-click="controller.addGame(game)">Add</button>
+                    <button ng-show="controller.currentGame" ng-click="controller.editGame(currentGame.id, game)">Update</button>
+                </td>
+            </tr>
+        </form>
+        <tr ng-repeat="library in controller.allGames">
+            <td>  {{library.Name}}  </td>
+            <td><img ng-src="{{library.Picture}}" width="100px" /></td>
+            <td>  {{library.Description}}  </td>
+            <td>  {{library.Min_Num_of_Players }} -  {{library.Max_Num_of_Players}}  </td>
+            <td>  {{library.Min_Playing_Time}}  -  {{library.Max_Playing_Time}}  </td>
+            <td>  {{library.Min_Age}}  -  {{library.Max_Age}}  </td>
+            <td>
+                <ul>
+                    <li ng-if="library.Co_op">
+                        Co-op<br>
+                    </li>
+                    <li ng-if="library.Strategy">
+                        Strategy<br>
+                    </li>
+                    <li ng-if="library.Party">
+                        Party<br>
+                    </li>
+                    <li ng-if="library.Classic">
+                        Classic<br>
+                    </li>
+                    <li ng-if="library.Worker_placement">
+                        Worker placement<br>
+                    </li>
+                    <li ng-if="library.Resource_management">
+                        Resource management  <br>
+                    </li>
+                    <li ng-if="library.Deck_building">
+                        Deck building
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li ng-if="library.Coolidge_Corner">
+                        Coolidge Corner<br>
+                    </li>
+                    <li ng-if="library.Teele_Square">
+                        Teele Square
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <button ng-click="selectGame(library)">Edit</button>
+                <button ng-click="deleteGame(library)">Remove</button>
+            </td>
+        </tr>
+    </table>
+</div>

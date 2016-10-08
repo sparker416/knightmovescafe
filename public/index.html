@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="KnightMovesApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="project/client/images/KM_logo.png">
+
+    <title>Knight Moves Cafe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="project/client/CSS/bootstrap.css" rel="stylesheet">
+    <link href="project/client/CSS/stylesheet.css" rel="stylesheet">
+
+
+    <script src="project/client/JS/angular.min.js"></script>
+    <script src="project/client/JS/angular-route.min.js"></script>
+    <script src="project/client/app.js"></script>
+    <script src="project/client/config.js"></script>
+    <script src="project/client/services/user.service.client.js"></script>
+    <script src="project/client/services/games.service.client.js"></script>
+    <script src="project/client/services/mail.service.client.js"></script>
+    <script src="project/client/controllers/header.controller.js"></script>
+    <script src="project/client/controllers/about.controller.js"></script>
+    <script src="project/client/controllers/admin.controller.js"></script>
+    <script src="project/client/controllers/home.controller.js"></script>
+    <script src="project/client/controllers/contact.controller.js"></script>
+    <script src="project/client/controllers/directions.controller.js"></script>
+    <script src="project/client/controllers/events.controller.js"></script>
+    <script src="project/client/controllers/faq.controller.js"></script>
+    <script src="project/client/controllers/library.controller.js"></script>
+    <script src="project/client/controllers/login.controller.js"></script>
+    <script src="project/client/controllers/news.controller.js"></script>
+    <script src="project/client/controllers/owner.controller.js"></script>
+    <script src="project/client/controllers/pricing.controller.js"></script>
+    <script src="project/client/controllers/profile.controller.js"></script>
+    <script src="project/client/controllers/update.controller.js"></script>
+    <script src="project/client/controllers/register.controller.js"></script>
+    <script src="project/client/controllers/search.controller.js"></script>
+    <script src="project/client/controllers/detail.controller.js"></script>
+
+</head>
+<body>
+    <div ng-include="'views/header.view.html'"></div>
+    <div ng-view></div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<!--<script src="../../assets/js/vendor/holder.min.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+</body>
+</html>

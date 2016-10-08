@@ -1,0 +1,45 @@
+<div class="back-white-black-border pad-10-px margin-1 col-xs-12">
+    <span class="align-center"><h1>{{controller.currentGame.Name}}</h1></span>
+
+    <div class="col-xs-6">
+        <img ng-src="{{controller.currentGame.Picture}}" width="100%" />
+    </div>
+
+    <div class="col-xs-6 pad-left-10-px">
+        <h4>Description</h4>
+        <p>{{controller.currentGame.Description}}</p>
+
+        <h4>Number of Players</h4>
+        <p>{{controller.currentGame.Min_Num_of_Players}} - {{controller.currentGame.Max_Num_of_Players}}</p>
+
+        <h4>Playtime (Hours)</h4>
+        <p>{{controller.currentGame.Min_Playing_Time}} - {{controller.currentGame.Max_Playing_Time}}</p>
+
+        <h4>Age Range</h4>
+        <p>{{controller.currentGame.Min_Age}} - {{controller.currentGame.Max_Age}}</p>
+
+        <h4>Type(s)</h4>
+        <ul>
+            <li ng-if="controller.currentGame.Co_op">Co-op</li>
+            <li ng-if="controller.currentGame.Strategy">Strategy</li>
+            <li ng-if="controller.currentGame.Party">Party</li>
+            <li ng-if="controller.currentGame.Classic">Classic</li>
+            <li ng-if="controller.currentGame.Worker_placement">Worker Placement</li>
+            <li ng-if="controller.currentGame.Resource_management">Resource Management</li>
+            <li ng-if="controller.currentGame.Deck_building">Deck Building</li>
+        </ul>
+
+        <h4>Where This Game Can Be Found</h4>
+        <ul>
+            <li ng-if="controller.currentGame.Coolidge_Corner">Coolidge Corner</li>
+            <li ng-if="controller.currentGame.Teele_Square">Teele Square</li>
+        </ul>
+
+        <div ng-if="controller.currentGame.Players">
+            <h4>People Who Have Played This Game</h4>
+            <ul>
+                <li ng-repeat="user in controller.currentGame.Players">{{user}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

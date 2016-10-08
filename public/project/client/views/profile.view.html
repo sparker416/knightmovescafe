@@ -1,0 +1,58 @@
+<div class="back-white-black-border pad-10-px margin-1 col-xs-12">
+    <p ng-show="controller.currentUser" ng-class="{'active': controller.$location.url()=='/update'}" class="align-center">
+        <a href="#/update">Update Profile</a>
+    </p>
+
+    <div class="col-xs-3 left-div">
+        Username: <br>
+        <br>
+        Games Played:
+    </div>
+
+    <div class="col-xs-9 right-div">
+        {{controller.currentUser.username}}<br>
+        <br>
+        <div ng-show="controller.error" class="alert-danger">{{controller.error}}</div>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>
+                    Game
+                </th>
+                <th>
+                    Times Played
+                </th>
+                <th>
+                    Date Last Played
+                </th>
+                <th ng-show="controller.currentUser">&nbsp;</th>
+            </tr>
+
+            <tr ng-show="controller.currentUser">
+                <td colspan="4">
+                    <div class="pad-10-px">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="gameName">Name</label>
+                                <input type="text" class="form-control" id="gameName" ng-model="controller.gameName">
+                            </div>
+                            <button type="submit" class="btn btn-info" ng-click="controller.addGameForUser(controller.currentUser._id, controller.gameName)">
+                                Add
+                            </button>
+                         </form>
+                    </div>
+                </td>
+            </tr>
+
+            <tr ng-repeat="meeple in controller.userGames" ng-click="controller.selectGame(meeple)" ng-class="{'success': $index == selectedGameIndex}">
+                <td>{{meeple.name}}</td>
+                <td>{{meeple.timesPlayed}}</td>
+                <td>{{meeple.dateLastPlayed}}</td>
+                <td ng-show="controller.currentUser">
+                    <button ng-click="controller.removeGameForUser(meeple)" class="btn btn-danger">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

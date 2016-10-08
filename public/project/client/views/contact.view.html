@@ -1,0 +1,67 @@
+<div class="ht-eq" ng-controller="ContactController as controller">
+    <div class="ht-row">
+        <div class="width-49 pad-10-px back-white-black-border ht-cell align-center">
+            <div>
+                <div class="float-left-49">
+                    <h4>Knight Moves Brookline</h4>
+                    <p>
+                        Knight Moves Cafe<br>
+                        1402 Beacon Street<br>
+                        Brookline, MA 02446<br>
+                    </p>
+                    <p>Phone Number: (617) 487-5259</p>
+                </div>
+                <div class="float-left-50">
+                    <h4>Knight Moves Somerville</h4>
+                    <p>
+                        Knight Moves Cafe<br>
+                        1159 Broadway<br>
+                        Somerville, MA 02144<br>
+                    </p>
+                    <p>Phone Number: (617) 702-4726</p>
+                </div>
+            </div>
+            <div class="margin-top-10">
+                <p>&nbsp;</p>
+                <p>Email Address: info@knightmovescafe.com</p>
+                <p><a href="https://twitter.com/KnightMovesCafe">@KnightMovesCafe on Twitter</a></p>
+                <p><a href="https://www.instagram.com/knightmovescafe/">knightmovescafe on Instagram</a></p>
+                <br>
+                <p><a href="https://www.facebook.com/knightmovescafe">Knight Moves Cafe Brookline on Facebook</a></p>
+                <p><a href="https://www.facebook.com/knightmovessomerville/">Knight Moves Cafe Somerville on Facebook</a></p>
+                <p><a href="https://plus.google.com/103235318041038785674">Knight Moves Cafe Brookline on Google Plus</a></p>
+                <p><a href="https://plus.google.com/102377390973457513938">Knight Moves Cafe Somerville on Google Plus</a></p>
+                <br>
+                <p><a href="https://www.meetup.com/Knight-Moves-Brookline-Open-Table-Gaming/">Knight Moves Cafe Brookline Meetup Group</a></p>
+                <p><a href="https://www.meetup.com/Knight-Moves-Somerville-Open-Table-Gaming/">Knight Moves Cafe Somerville Meetup Group</a></p>
+            </div>
+        </div>
+        <div class="back-white-black-border width-49 ht-cell pad-10-px">
+            <h3 class="align-center">Contact Us</h3>
+            <form id="contactForm" name="contactForm" class="form-horizontal">
+                <div class="form-group">
+                    <label for="contactName" class="col-sm-3 control-label">Name: <span class="color-red bold">*</span></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="contactName" ng-model="controller.contactName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail" class="col-sm-3 control-label">Email Address: <span class="color-red bold">*</span></label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="contactEmail" placeholder="email@domain.com" ng-model="controller.contactEmail" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage" class="col-sm-3 control-label">Message: <span class="color-red bold">*</span></label>
+                    <div class="col-sm-9">
+                        <textarea rows="10" cols="30" id="contactMessage" class="form-control" ng-model="controller.contactMessage" required></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-offset-3 col-sm-9">
+                    <button type="submit" class="btn btn-default" ng-click="controller.mail(controller.contactName, controller.contactEmail, controller.contactMessage)"
+                            onclick="alert('Thank you for contacting us!')">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
