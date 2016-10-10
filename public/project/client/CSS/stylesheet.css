@@ -165,7 +165,7 @@ body {
     position: absolute;
     right: 0;
     z-index: 1030;
-    top: 155px;
+    top: 140px;
 }
 .login-links-fixed {
     position: absolute;
@@ -173,6 +173,7 @@ body {
     z-index: 1030;
     top: 0;
     color: white;
+    font-size: 150%;
 }
 .about-events {
     background-color: white;
